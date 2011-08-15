@@ -6,11 +6,9 @@
 // ----------------------------------------------------------------------------
 myMarkdownSettings = {
     nameSpace:          'markdown', // Useful to prevent multi-instances CSS conflict
-    previewParserPath:  '~/sets/markdown/preview.php',
+    //previewParserPath:  '~/sets/markdown/preview.php',
     onShiftEnter:       {keepDefault:false, openWith:'\n\n'},
     markupSet: [
-        {name:'First Level Heading', key:"1", placeHolder:'Your title here...', closeWith:function(markItUp) { return miu.markdownTitle(markItUp, '='); } },
-        {name:'Second Level Heading', key:"2", placeHolder:'Your title here...', closeWith:function(markItUp) { return miu.markdownTitle(markItUp, '-'); } },
         {name:'Heading 3', key:"3", openWith:'### ', placeHolder:'Your title here...' },
         {name:'Heading 4', key:"4", openWith:'#### ', placeHolder:'Your title here...' },
         {name:'Heading 5', key:"5", openWith:'##### ', placeHolder:'Your title here...' },
@@ -27,25 +25,10 @@ myMarkdownSettings = {
         {name:'Picture', key:"P", replaceWith:'![[![Alternative text]!]]([![Url:!:http://]!] "[![Title]!]")'},
         {name:'Link', key:"L", openWith:'[', closeWith:']([![Url:!:http://]!] "[![Title]!]")', placeHolder:'Your text to link here...' },
         {separator:'---------------'},    
-        {name:'Quotes', openWith:'> '},
-        {name:'Code Block / Code', openWith:'(!(\t|!|`)!)', closeWith:'(!(`)!)'},
-        {separator:'---------------'},
-        {name:'Preview', call:'preview', className:"preview"}
+        {name:'Quotes', openWith:'> '}
     ]
 };
 
-// mIu nameSpace to avoid conflict.
-miu = {
-    markdownTitle: function(markItUp, char) {
-        heading = '';
-        n = $.trim(markItUp.selection||markItUp.placeHolder).length;
-        for(i = 0; i < n; i++) {
-            heading += char;
-        }
-        return '\n'+heading+'\n';
-    }
-};
-
-$(document).ready(function(){
-    $('.markdown .markdown_extra').markItUp(myMarkdownSettings);
+jQuery(document).ready(function(){
+    jQuery('.markdown, .markdown_extra').markItUp(myMarkdownSettings);
 });
