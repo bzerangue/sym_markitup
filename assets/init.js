@@ -9,8 +9,8 @@ myMarkdownSettings = {
     previewParserPath:  '~/sets/markdown/preview.php',
     onShiftEnter:       {keepDefault:false, openWith:'\n\n'},
     markupSet: [
-        {name:'First Level Heading', key:"1", placeHolder:'Your title here...', closeWith:function(markItUp) { return miu.markdownTitle(markItUp, '=') } },
-        {name:'Second Level Heading', key:"2", placeHolder:'Your title here...', closeWith:function(markItUp) { return miu.markdownTitle(markItUp, '-') } },
+        {name:'First Level Heading', key:"1", placeHolder:'Your title here...', closeWith:function(markItUp) { return miu.markdownTitle(markItUp, '='); } },
+        {name:'Second Level Heading', key:"2", placeHolder:'Your title here...', closeWith:function(markItUp) { return miu.markdownTitle(markItUp, '-'); } },
         {name:'Heading 3', key:"3", openWith:'### ', placeHolder:'Your title here...' },
         {name:'Heading 4', key:"4", openWith:'#### ', placeHolder:'Your title here...' },
         {name:'Heading 5', key:"5", openWith:'##### ', placeHolder:'Your title here...' },
@@ -32,7 +32,7 @@ myMarkdownSettings = {
         {separator:'---------------'},
         {name:'Preview', call:'preview', className:"preview"}
     ]
-}
+};
 
 // mIu nameSpace to avoid conflict.
 miu = {
@@ -44,7 +44,7 @@ miu = {
         }
         return '\n'+heading+'\n';
     }
-}
+};
 
 $(document).ready(function(){
     $('.markdown .markdown_extra').markItUp(myMarkdownSettings);
