@@ -29,9 +29,9 @@ class extention_sym_markitup extends Extension {
     
     public function __appendAssets($context){
         		if(isset(Administration::instance()->Page->_context['section_handle']) && in_array(Administration::instance()->Page->_context['page'], array('new', 'edit'))){	
-    				Administration::instance()->Page->addStylesheetToHead(URL . '/extensions/sym_markitup/assets/markitup/skins/markitup/style.css', 'screen', 221);
-                    Administration::instance()->Page->addStylesheetToHead(URL . '/extensions/sym_markitup/assets/markitup/sets/markdown/style.css', 'screen', 222);
-    				Administration::instance()->Page->addScriptToHead(URL . '/extensions/sym_markitup/assets/markitup/sets/markdown/set.js', 223);	
+    				Administration::instance()->Page->addStylesheetToHead(URL . '/extensions/sym_markitup/assets/editor/markitup/skins/markitup/style.css', 'screen', 221);
+                    Administration::instance()->Page->addStylesheetToHead(URL . '/extensions/sym_markitup/assets/editor/markitup/sets/markdown/style.css', 'screen', 222);
+    				Administration::instance()->Page->addScriptToHead(URL . '/extensions/sym_markitup/assets/editor/markitup/sets/markdown/set.js', 223);	
                     Administration::instance()->Page->addScriptToHead(URL . '/extensions/sym_markitup/assets/init.js', 224);
     			}
     		}
