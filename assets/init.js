@@ -5,8 +5,7 @@
 // http://markitup.jaysalvat.com/
 // ----------------------------------------------------------------------------
 myMarkdownSettings = {
-    nameSpace:          'markdown', // Useful to prevent multi-instances CSS conflict
-    //previewParserPath:  '~/sets/markdown/preview.php',
+    nameSpace:          'default', // Useful to prevent multi-instances CSS conflict
     onShiftEnter:       {keepDefault:false, openWith:'\n\n'},
     markupSet: [
         {name:'Heading 3', key:"3", openWith:'### ', placeHolder:'Your title here...' },
