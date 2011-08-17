@@ -1,5 +1,10 @@
-# Sym markItUp!
+Sym MarkItUp
+============
 
-Small Symphony extention to enable the markItUp! editor :)
+[MarkItUp!][1] editor in the Symphony administration back end. The editor will attach itself to any Markdown or Markdown Extra textareas.
 
-H1 and H2 buttons are **not** enabled. If this is an issue then tell me.
+Very simple implementation.
+
+Please feel free to post issues in GitHub if you come across any :)
+
+  [1]: http://markitup.jaysalvat.com/home/
