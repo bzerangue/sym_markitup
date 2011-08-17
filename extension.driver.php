@@ -6,14 +6,14 @@ class extension_sym_markitup extends Extension {
     public function about(){
         return array(
             'name' => 'Sym MarkItUp',
-            'version' => '0.8',
-            'release-date' => '2011-08-15',
+            'version' => '1.0',
+            'release-date' => '2011-08-16',
             'author' => array(
                 'name' => 'Jonathan Hughes',
                 'website' => 'http://www.onlinenotime.com',
                 'email' => 'jonathanbhughes@gmail.com'
             ),
-            'description' => 'Adds markItUp editor to all applicable textareas.'
+            'description' => 'Adds MarkItUp editor to all applicable textareas.'
         );
     }
     
@@ -31,7 +31,7 @@ class extension_sym_markitup extends Extension {
         		if(isset(Administration::instance()->Page->_context['section_handle']) && in_array(Administration::instance()->Page->_context['page'], array('new', 'edit'))){	
     				Administration::instance()->Page->addStylesheetToHead(URL . '/extensions/sym_markitup/assets/style.css', 'screen', 222);
     				Administration::instance()->Page->addScriptToHead(URL . '/extensions/sym_markitup/assets/jquery.markitup.js', 223);
-                    Administration::instance()->Page->addScriptToHead(URL . '/extensions/sym_markitup/assets/init.js', 224);
+					Administration::instance()->Page->addScriptToHead(URL . '/extensions/sym_markitup/assets/init.js', 224);
     			}
     		}
     	}
