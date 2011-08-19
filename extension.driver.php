@@ -20,7 +20,7 @@ class extension_sym_markitup extends Extension {
     public function getSubscribedDelegates(){
         return array(
             array(
-                'page' => '/administration/',
+                'page' => '/backend/',
                 'delegate' => 'AdminPagePreGenerate',
                 'callback' => '__appendAssets'
             )
