@@ -6,8 +6,8 @@ class extension_sym_markitup extends Extension {
     public function about(){
         return array(
             'name' => 'Sym MarkItUp',
-            'version' => '1.0',
-            'release-date' => '2011-08-16',
+            'version' => '1.01',
+            'release-date' => '2011-08-19',
             'author' => array(
                 'name' => 'Jonathan Hughes',
                 'website' => 'http://www.onlinenotime.com',
